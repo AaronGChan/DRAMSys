@@ -1,17 +1,17 @@
 {
     "mcconfig": {
-        "PagePolicy": "Open",
-        "Scheduler": "FrFcfs",
-        "SchedulerBuffer": "Bankwise",
-        "RequestBufferSize": 8,
+        "PagePolicy": "ClosedAdaptive",
+        "Scheduler": "FrFcfsGrp",
+        "SchedulerBuffer": "Shared",
+        "RequestBufferSize": 6,
         "CmdMux": "Oldest",
-        "RespQueue": "Fifo",
-        "RefreshPolicy": "AllBank",
-        "RefreshMaxPostponed": 0,
-        "RefreshMaxPulledin": 0,
+        "RespQueue": "Reorder",
+        "RefreshPolicy": "NoRefresh",
+        "RefreshMaxPostponed": 2,
+        "RefreshMaxPulledin": 5,
         "PowerDownPolicy": "NoPowerDown",
         "Arbiter": "Simple",
-        "MaxActiveTransactions": 128,
+        "MaxActiveTransactions": 2,
         "RefreshManagement": false
     }
 }
